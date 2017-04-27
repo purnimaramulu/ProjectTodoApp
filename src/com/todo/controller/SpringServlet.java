@@ -132,15 +132,12 @@ public class SpringServlet<UnexpectedErrorBean> {
 
 	    System.out.println(results);
 	    
-	    if(results.isEmpty()){
+	    if(results.isEmpty())
+	    {
 		    
 		    
 	    	PrintWriter out = response.getWriter();  
-//	    	response.setContentType("text/html");  
-//	    	   out.println("<script type=\"text/javascript\">");
-//	           out.println("alert('User or password incorrect');");
-//	           out.println("</script>");
-	    	
+
 		    	System.out.println("failed");
 		    	session.setAttribute("Error", "Username or password is incorrect!! If you are a new user please Signup" );
 		    	 response.sendRedirect("/");
