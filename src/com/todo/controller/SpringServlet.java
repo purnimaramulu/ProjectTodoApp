@@ -79,6 +79,16 @@ public class SpringServlet<UnexpectedErrorBean> {
 		}
 		return "hello";
 	}
+	
+	
+
+	@RequestMapping(value ="/HelloWorldsSpec")
+	public ModelAndView specRunner() {
+		
+		ModelAndView Obj= new ModelAndView("HelloWorldsSpec");
+		
+		return Obj;
+	}
 
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public void signup(HttpServletRequest request, HttpServletResponse response) throws IOException {
