@@ -1,31 +1,22 @@
-MathUtils = function() {};
- 
-MathUtils.prototype.sum = function(number1, number2) {
-        return number1 + number2;
-}
- 
-MathUtils.prototype.substract = function(number1, number2) {
-    return number1 - number2;
-}
- 
-MathUtils.prototype.multiply = function(number1, number2) {
-    return number1 * number2;
-}
- 
-MathUtils.prototype.divide = function(number1, number2) {
-    return number1 / number2;
-}
- 
-MathUtils.prototype.average = function(number1, number2) {
-    return (number1 + number2) / 2;
-}
- 
-MathUtils.prototype.factorial = function(number) {
-    if (number < 0) {
-        throw new Error("There is no factorial for negative numbers");
-    } else if (number == 1 || number == 0) {
-        return 1;
-    } else {
-        return number * this.factorial(number - 1);
-    }
-}
+
+var helloworld = function(){   
+   return 'Hello World'; 
+};
+function isEmail_valid(email){
+	var pattern =/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+	return pattern.test(email)
+	};
+	window.expectexam = {    
+			   currentVal: 0,  
+
+			   exampleoftrueFalse: function (num){  
+			      if(num < 10)    
+			         return true;  
+			      else   
+			         return false;  
+			   },  
+			};
+
+
+
+			
