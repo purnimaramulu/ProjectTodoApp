@@ -411,7 +411,7 @@ public class SpringServlet<UnexpectedErrorBean> {
 	@RequestMapping("/loginWithGoogle")
 	public ModelAndView loginWithGoogle() {
 		return new ModelAndView(
-				"redirect:https://accounts.google.com/o/oauth2/auth?redirect_uri=http://1-dot-purnimatodo.appspot.com/get_auth_code&response_type=code&client_id=599072444323-ail94i33mej19p9ldka8gq6djs6t5rrb.apps.googleusercontent.com&approval_prompt=force&scope=email&access_type=online");
+				"redirect:https://accounts.google.com/o/oauth2/auth?redirect_uri=http://localhost:8888/get_auth_code&response_type=code&client_id=599072444323-ail94i33mej19p9ldka8gq6djs6t5rrb.apps.googleusercontent.com&approval_prompt=force&scope=email&access_type=online");
 	}
 	
 	
@@ -429,7 +429,7 @@ public class SpringServlet<UnexpectedErrorBean> {
 
 		URL url = new URL("https://www.googleapis.com/oauth2/v3/token?"
 				+ "client_id=599072444323-ail94i33mej19p9ldka8gq6djs6t5rrb.apps.googleusercontent.com"
-				+ "&client_secret=qP9RkGsJGT5UONSueWyJcex1&" + "redirect_uri=http://1-dot-purnimatodo.appspot.com/get_auth_code&"
+				+ "&client_secret=qP9RkGsJGT5UONSueWyJcex1&" + "redirect_uri=http://localhost:8888/get_auth_code&"
 				+ "grant_type=authorization_code&" + "code=" + auth_code);
 		HttpURLConnection connect = (HttpURLConnection) url.openConnection();
 		connect.setRequestMethod("POST");
