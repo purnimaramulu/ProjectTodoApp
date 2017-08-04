@@ -13,11 +13,14 @@
 
   <!-- include source files here... -->
   <script src="js/MathUtils.js"></script>
+    <script src="js/SpyJasmine.js"></script>
   
 
   <!-- include spec files here... -->
   
   <script src="js/MathUtilsSpec.js"></script>
+   <script src="js/spyJasmineSpec.js"></script>
+  
 
 </head>
 
