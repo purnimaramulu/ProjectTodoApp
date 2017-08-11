@@ -16,18 +16,13 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.3.3/backbone.js"></script>
 
   <!-- include source files here... -->
-  <script src="js/MathUtils.js"></script>
-    <script src="js/SpyJasmine.js"></script>
-      <script src="js/Todo.js"></script>
+  <script src="js/script.js"></script>
       
   
 
   <!-- include spec files here... -->
-  
-  <script src="js/MathUtilsSpec.js"></script>
-   <script src="js/spyJasmineSpec.js"></script>
-   <script src="js/Todospec.js"></script>
-   
+    <script src="js/MyTodospec.js"></script>
+     
   
 
 </head>
