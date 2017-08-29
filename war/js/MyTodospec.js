@@ -1,16 +1,35 @@
 describe("Test for mytodo app", function() {
-	var Mytodo,MyView,View, Fetch;
+	var Mytodo,MyView,View, Fetch,obj,valueReturned;
 
 	beforeEach(function() {
 		Mytodo = new app.Todo.prototype.defaults();
 		MyView = new app.Todo();
-	
-		View   = new app.AppView();
-		console.log(View);
+
+
 //		console.error(app.TodoView());
 //		Fetch = new app.TodoList.fetch();
+	
+		
+	});
 
-	})
+	beforeAll(function(done){
+	
+		setTimeout(function () {
+		app.TodoList.fetch({
+		success : function(collection, response, options) {
+	    console.log(options);
+	    console.log(collection);
+	    console.log(response);
+
+		valueReturned = options.xhr.responseText; 
+	
+		console.log(valueReturned);
+		return valueReturned;
+		}
+		});
+		done();
+		}, 1);
+		});
 	
 	
 
@@ -42,38 +61,52 @@ describe("Test for mytodo app", function() {
 	
 	it("should define the view", function(){
 		expect(View).toBeDefined();
-        expect(app.AppView.prototype.clearCompleted).toBeDefined();
+        expect(app.AppView.clearCompleted).toBeDefined();
 	
 	});
     it("expected Clear complete to be define", function(){
-    expect(app.AppView.prototype.clearCompleted).toBeDefined();
+    expect(app.AppView.clearCompleted).toBeDefined();
     })
     it(" create function should be defined", function(){
-    	expect(app.AppView.prototype.createOnEnter).toBeDefined();
+    	expect(app.AppView.createOnEnter).toBeDefined();
     })
      it(" deleteList function should be defined", function(){
-    	expect(app.AppView.prototype.deleteList).toBeDefined();
+    	expect(app.AppView.deleteList).toBeDefined();
     })
      it(" edit function should be defined", function(){
-    	expect(app.AppView.prototype.edit).toBeDefined();
+    	expect(app.AppView.edit).toBeDefined();
     })
     it(" these elements should  be defined", function(){
-    	expect(app.AppView.prototype.saveNow).toBeDefined();
-    	expect(app.AppView.prototype.tagName).toBeDefined();
-    	expect(app.AppView.prototype.toggle).toBeDefined();
-    	expect(app.AppView.prototype.toggle).toBeDefined();
-    	expect(app.AppView.prototype.events).toBeDefined();
-    	expect(app.AppView.prototype.el).toBeDefined();
-    	expect(app.AppView.hasOwnProperty).toBeDefined();
+    	expect(app.AppView.saveNow).toBeDefined();
+    	expect(app.AppView.tagName).toBeDefined();
+    	expect(app.AppView.toggle).toBeDefined();
+    	expect(app.AppView.toggle).toBeDefined();
+    	expect(app.AppView.events).toBeDefined();
 
 
 
     })
+   
+
+    it('fetch should populate the collection', function() {
+        
+    	expect(typeof valueReturned).toBeDefined();
+    })
     
+    it('save should be present', function(){
+    	
+    	MyView.save({
+    		success : function(data){
+    			console.log(data);
+    		}
+    	});
+    	
+        expect(MyView).toBeDefined();
+
+    });
     
-    
-    
-    
+   
+   
     
 
 	

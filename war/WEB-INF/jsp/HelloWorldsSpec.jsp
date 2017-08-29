@@ -21,11 +21,18 @@
   
 
   <!-- include source files here... -->
+  
   <script src="js/script.js"></script>
-  <script src="js/TodoView.js"></script>
-  <script src="js/Listview.js"></script>
-  
-  
+	<script src="js/TodoView.js"></script>
+	<script src="js/Listview.js"></script>
+	
+
+	<script>
+	$(document).ready(function(){
+	
+		app.AppView= new app.AppView();
+	});
+	</script>
       
   
 
@@ -36,7 +43,7 @@
     
     
    
-     
+    
  	 
 
 </head>
